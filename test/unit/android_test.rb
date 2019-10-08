@@ -3,6 +3,12 @@
 require "test_helper"
 
 class AndroidTest < Minitest::Test
+  test "detect android feedmob ua" do
+    browser = Browser.new(Browser["FEEDMOB_BROWSER_TEST"])
+    assert browser.platform.android?
+    assert browser.platform.android?('8.1.0')
+  end
+
   test "detect android cupcake (1.5)" do
     browser = Browser.new(Browser["ANDROID_CUPCAKE"])
     assert browser.platform.android?
