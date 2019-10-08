@@ -16,7 +16,7 @@ module Browser
       end
 
       def version
-        ua[/Android ([\d.]+)/, 1]
+        ua[/Android[\ _]([\d.]+)/, 1]
       end
     end
   end
